@@ -23,4 +23,9 @@ while i < list.length * 6
     	i+=1
     end
 end
-puts gp
+arr = list.zip(gp)
+sorted = arr.sort {|a,b| b[1] <=> a[1]}
+sorted.each do |arr|
+	arr.push("PR")
+end
+p sorted
